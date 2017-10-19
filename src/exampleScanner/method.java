@@ -9,7 +9,7 @@ public class method {
         // oneMethod();
         // twoMethod();
         // show();
-        // calculator();
+         calculator();
 
     }
 

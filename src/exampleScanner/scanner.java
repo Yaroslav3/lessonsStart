@@ -10,7 +10,7 @@ public class scanner {
         //scannerDoubleMoney();     // вывод копеек в числе Double
         //scannerDoubleProduct();   // цена товара и сколько , денег
         //numberScannerInteger();   // ввести целое двузначное число. Вывести первую цифру на экран
-        numberOneDouble();         // первая цифра после запятой
+        //numberOneDouble();         // первая цифра после запятой
 
     }
 

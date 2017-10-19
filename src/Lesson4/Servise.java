@@ -9,23 +9,29 @@ public class Servise {
         sony.setColor("Blue");
         sony.setId(2353);
         sony.setSize(40);
-        show(sony);
+        sony.show();
+        showI(sony);
 
+        System.out.println();
         Panasonic panasonic = new Panasonic();
-        panasonic.setColor("Bleak");
+        panasonic.setColor("Black");
         panasonic.setId(25866);
         panasonic.setSize(40);
-        show(panasonic);
+        panasonic.show();
+        showI(panasonic);
 
+        System.out.println();
         Samsung samsung = new Samsung();
-        samsung.setColor("Bleak");
+        samsung.setColor("Black");
         samsung.setId(56566);
         samsung.setSize(40);
-        show(samsung);
-
-
+        panasonic.show();
+        showI(samsung);
     }
-    private static void show(Object o){
-       o.
+    private static void showI(Display o){
+        System.out.println(o.getSize());
+        System.out.println(o.getId());
+        System.out.println(o.getColor());
+
     }
 }

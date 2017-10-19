@@ -3,7 +3,7 @@ package Lesson4;
 /**
  * Created by Ярик on 19.10.2017.
  */
-public class Display {
+public class Display extends Servise {
 
     private int id ;
     private String color;
@@ -11,8 +11,8 @@ public class Display {
 
 
 
-    public void show(){
-
+        public void show(){
+            System.out.println("kvf");
     }
 
 
