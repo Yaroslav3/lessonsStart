@@ -9,13 +9,9 @@ public class Display extends Servise {
     private String color;
     private int size;
 
-
-
         public void show(){
             System.out.println("kvf");
     }
-
-
     public int getId() {
         return id;
     }
