@@ -11,7 +11,7 @@ public class scannerSwitch {
        // outputOnDisplay();            // 2
         //scannerFor();                 // 3
         // scannerForStar();            // 4
-        //starRectangle();
+        starRectangle();
     }
 
     public static void number() {
@@ -112,7 +112,6 @@ public class scannerSwitch {
                     System.out.print("*");
                 else
                     System.out.print(" ");
-
             }
             System.out.println();
         }
