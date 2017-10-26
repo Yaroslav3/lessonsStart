@@ -1,6 +1,5 @@
 package fileWriter;
-
-import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,8 +14,10 @@ public class FileWriterReader {
 
     public static void main(String[] args) throws IOException {
         //fileWriter();
-        fileWriterAddString();
+        // fileWriterAddString();
+        methodEven();
     }
+
 
     private static void fileWriter() throws IOException {
         nameFile(name);
@@ -26,14 +27,14 @@ public class FileWriterReader {
         FileReader fileReader = new FileReader(s);
         scn = new Scanner(fileReader);
         String s1 = null;
-       int a =0;
-       while (scn.hasNextLine()){
-           s1 = scn.nextLine();
-           a++;
-       }
+        int a = 0;
+        while (scn.hasNextLine()) {
+            s1 = scn.nextLine();
+            a++;
+        }
         System.out.println(a);
-       fileReader.close();
-       return a;
+        fileReader.close();
+        return a;
     }
 
 
@@ -47,6 +48,39 @@ public class FileWriterReader {
         fileWriter.write(s);
         fileWriter.close();
         nameFile(name);
+    }
+
+    private static void methodEven() throws IOException {
+        String nameFile = "code.txt";
+        int k1 = 0;
+        int k2 = 100;
+        method(k1, k2, nameFile);
+    }
+
+    private static void method(int k1, int k2, String nameFile) throws IOException {
+        FileWriter fileWriter = new FileWriter(nameFile,true);
+        for (int i = k1; i < k2; i++) {
+            if (i % 2 != 1) {
+                fileWriter.write("\n " + i);
+            }
+        }
+        methodReade(nameFile);
+        fileWriter.close();
+    }
+
+    private static void methodReade(String nameFile) throws IOException {
+     FileReader fileReader = new FileReader(nameFile);
+     scn = new Scanner(fileReader);
+        while (scn.hasNextLine()){
+            String s1 = scn.nextLine();
+            print(s1);
+        }
+        fileReader.close();
+        scn.close();
+    }
+
+    private static void print(String s) {
+        System.out.print(s + "");
     }
 }
 
