@@ -16,7 +16,7 @@ public class Myself {
 
     }
 
-    Myself(){
+    Myself() {
 
     }
 
@@ -47,10 +47,14 @@ public class Myself {
 
     @Override
     public String toString() {
-        return "Myself{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", programmingSchool='" + surName + '\'' +
-                '}';
+        int i = 1;
+        String s = null ;
+        while (i <= 3){
+        s ="\n"+ "[" + i +"]\n"+"name     = " + name + '\n' +
+                "age      = " + age +'\n'+
+                "surname  = " + surName + '\n';
+            i++;
+        }
+        return s;
     }
 }

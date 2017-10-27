@@ -12,6 +12,7 @@ public class Service {
         methodFileWriter(myself1);
         Myself myself2 = new Myself("Pavel", 28, "Klmashevskiy");
         methodFileWriter(myself2);
+        System.out.println(myself);
 
     }
 
@@ -25,18 +26,13 @@ public class Service {
 
     private static void methodFileWriter(Myself m) throws IOException {
         int i =1;
-
         String n = "name    : ";
         String a = "age     : ";
         String s1 = "surname : ";
         String nameFile = "src\\resources\\file.txt";
         FileWriter fileWriter = new FileWriter(nameFile,true);
-            System.out.println(" ");
 
-            fileWriter.write( "\n"+ "["+ i +"]"+
-                    "\n" + n + " "+ m.getName() +
-                    "\n" + s1 +" "+ m.getSurName()+
-                    "\n" + a + " "+ m.getAge());
+        fileWriter.write(m.toString());
 
 
             fileWriter.close();

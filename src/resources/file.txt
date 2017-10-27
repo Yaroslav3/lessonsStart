@@ -1,13 +1,15 @@
 
-[4]
-name    :  Yaroslav
-surname :  Klmashevskiy
-age     :  35
-[4]
-name    :  Vitaliy
-surname :  Klmashevskiy
-age     :  35
-[4]
-name    :  Pavel
-surname :  Klmashevskiy
-age     :  28
+[3]
+name     = Yaroslav
+age      = 35
+surname  = Klmashevskiy
+
+[3]
+name     = Vitaliy
+age      = 35
+surname  = Klmashevskiy
+
+[3]
+name     = Pavel
+age      = 28
+surname  = Klmashevskiy
