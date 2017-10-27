@@ -47,14 +47,8 @@ public class Myself {
 
     @Override
     public String toString() {
-        int i = 1;
-        String s = null ;
-        while (i <= 3){
-        s ="\n"+ "[" + i +"]\n"+"name     = " + name + '\n' +
+        return "\n"+ "[" +"]\n"+"name     = " + name + '\n' +
                 "age      = " + age +'\n'+
                 "surname  = " + surName + '\n';
-            i++;
-        }
-        return s;
     }
 }
