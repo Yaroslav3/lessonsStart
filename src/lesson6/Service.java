@@ -25,15 +25,10 @@ public class Service {
     }
 
     private static void methodFileWriter(Myself m) throws IOException {
-        int i =1;
-        String n = "name    : ";
-        String a = "age     : ";
-        String s1 = "surname : ";
         String nameFile = "src\\resources\\file.txt";
         FileWriter fileWriter = new FileWriter(nameFile,true);
 
         fileWriter.write(m.toString());
-
 
             fileWriter.close();
     }
