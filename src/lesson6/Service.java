@@ -27,10 +27,8 @@ public class Service {
     private static void methodFileWriter(Myself m) throws IOException {
         String nameFile = "src\\resources\\file.txt";
         FileWriter fileWriter = new FileWriter(nameFile,true);
-
         fileWriter.write(m.toString());
-
-            fileWriter.close();
+        fileWriter.close();
     }
 }
 
