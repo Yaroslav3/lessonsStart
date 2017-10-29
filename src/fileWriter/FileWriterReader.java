@@ -9,15 +9,15 @@ import java.util.Scanner;
  * Created by Ярик on 25.10.2017.
  */
 public class FileWriterReader {
-    private static String name = "file.txt";
+    private final static String nameFile = "code.txt";
+    private final static String name = "file.txt";
     private static Scanner scn = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        //fileWriter();
-        // fileWriterAddString();
+        // fileWriter();
+        //fileWriterAddString();
         methodEven();
     }
-
 
     private static void fileWriter() throws IOException {
         nameFile(name);
@@ -51,36 +51,23 @@ public class FileWriterReader {
     }
 
     private static void methodEven() throws IOException {
-        String nameFile = "code.txt";
-        int k1 = 0;
-        int k2 = 100;
-        method(k1, k2, nameFile);
-    }
-
-    private static void method(int k1, int k2, String nameFile) throws IOException {
-        FileWriter fileWriter = new FileWriter(nameFile,true);
-        for (int i = k1; i < k2; i++) {
-            if (i % 2 != 1) {
-                fileWriter.write("\n " + i);
-            }
+        FileWriter fileWriter = new FileWriter(nameFile);
+        int value = 100;
+        for (int i = 0; i < 100; i++) {
+            i = (int) (Math.random() * 100);
+            fileWriter.write(i + " \n");
         }
-        methodReade(nameFile);
+        methodReade(nameFile, value);
         fileWriter.close();
     }
 
-    private static void methodReade(String nameFile) throws IOException {
-     FileReader fileReader = new FileReader(nameFile);
-     scn = new Scanner(fileReader);
-        while (scn.hasNextLine()){
-            String s1 = scn.nextLine();
-            print(s1);
+    private static void methodReade(String name, int value) throws IOException {
+        FileReader fileReader = new FileReader(name);
+        scn = new Scanner(fileReader);
+        while (scn.hasNextLine()) {
+           int a = scn.nextInt();
+            System.out.println(a + " \n");
         }
-        fileReader.close();
-        scn.close();
-    }
-
-    private static void print(String s) {
-        System.out.print(s + "");
     }
 }
 
